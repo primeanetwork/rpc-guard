@@ -243,7 +243,11 @@ func decodeHex(s string) ([]byte, error) {
 	if strings.HasPrefix(s, "0x") {
 		s = s[2:]
 	}
-	return new(big.Int).SetString(s, 16)
+	bigint, ok := new(big.Int).SetString(s, 16)
+	if !ok {
+		return nil, fmt.Errorf("invalid hex: %s", s)
+	}
+	return bigint.Bytes(), nil
 }
 
 func blockNum(val interface{}) *big.Int {
