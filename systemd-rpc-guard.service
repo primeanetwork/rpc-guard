@@ -1,0 +1,15 @@
+[Unit]
+Description=Primea RPC Guard Middleware
+After=network.target
+
+[Service]
+User=superuser
+WorkingDirectory=/opt/primea/rpc-guard
+ExecStart=/opt/primea/rpc-guard/rpc-guard
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+Environment=GODEBUG=http2debug=0
+
+[Install]
+WantedBy=multi-user.target
