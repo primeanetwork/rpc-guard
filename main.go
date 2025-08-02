@@ -163,8 +163,8 @@ func main() {
 	http.HandleFunc("/", handleRPC)
 	http.Handle("/metrics", promhttp.Handler())
 
-	log.Println("🛡️ Primea RPC Guard (with dynamic config) on :18545")
-	log.Fatal(http.ListenAndServe(":18545", nil))
+	log.Println("🛡️ Primea RPC Guard (with dynamic config) on :8545")
+	log.Fatal(http.ListenAndServe(":8545", nil))
 }
 
 func handleRPC(w http.ResponseWriter, r *http.Request) {

@@ -6,5 +6,5 @@ RUN go build -o rpc-guard main.go
 
 FROM alpine
 COPY --from=builder /app/rpc-guard /usr/local/bin/rpc-guard
-EXPOSE 18545
+EXPOSE 8545
 CMD ["rpc-guard"]

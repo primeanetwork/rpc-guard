@@ -1,5 +1,5 @@
 {
-  "geth_rpc": "http://localhost:8545",
+  "geth_rpc": "http://localhost:18545",
   "min_gas_price_gwei": 50,
   "log_block_range_limit": 50000,
   "rate_limits": {

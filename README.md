@@ -24,7 +24,7 @@ Create a `config.json` file:
 
 ```json
 {
-  "geth_rpc": "http://localhost:8545",
+  "geth_rpc": "http://localhost:18545",
   "min_gas_price_gwei": 50,
   "log_block_range_limit": 50000,
   "rate_limits": {
@@ -48,7 +48,7 @@ Create a `config.json` file:
 
 4. **Prometheus:**
 
-Access metrics at `http://localhost:18545/metrics`
+Access metrics at `http://localhost:8545/metrics`
 
 ## Systemd (optional)
 
